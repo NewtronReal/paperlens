@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+data/
+checkpoints/
+results/
+.pytest_cache/
+node_modules/
+frontend/dist/
