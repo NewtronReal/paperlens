@@ -1,0 +1,148 @@
+{
+  "model": "allenai/scibert_scivocab_uncased",
+  "args": {
+    "model_name": "allenai/scibert_scivocab_uncased",
+    "data_dir": null,
+    "epochs": 4,
+    "batch_size": 32,
+    "lr": 2e-05,
+    "max_len": 128,
+    "warmup": 0.1,
+    "seed": 42,
+    "with_section": false,
+    "no_class_weights": false,
+    "max_train": null,
+    "out": "/home/pratham/Ddrive/iiitk/7-sem/deep-learning/mini-project/paperlens/checkpoints/intent_scibert",
+    "tag": "intent_scibert"
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.5829913592987951,
+      "dev_macro_f1": 0.7951670813246415
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.32642983343698634,
+      "dev_macro_f1": 0.796668653811511
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.21721445466119957,
+      "dev_macro_f1": 0.8318137622579659
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.1432010224958744,
+      "dev_macro_f1": 0.8245287698412698
+    }
+  ],
+  "dev": {
+    "macro_f1": 0.8318137622579659,
+    "accuracy": 0.8504366812227074,
+    "per_class": {
+      "background": {
+        "precision": 0.888045540796964,
+        "recall": 0.8698884758364313,
+        "f1-score": 0.8788732394366198,
+        "support": 538.0
+      },
+      "method": {
+        "precision": 0.8214285714285714,
+        "recall": 0.8117647058823529,
+        "f1-score": 0.8165680473372781,
+        "support": 255.0
+      },
+      "result": {
+        "precision": 0.7591240875912408,
+        "recall": 0.8455284552845529,
+        "f1-score": 0.8,
+        "support": 123.0
+      },
+      "accuracy": 0.8504366812227074,
+      "macro avg": {
+        "precision": 0.822866066605592,
+        "recall": 0.8423938790011124,
+        "f1-score": 0.8318137622579659,
+        "support": 916.0
+      },
+      "weighted avg": {
+        "precision": 0.8521889185990992,
+        "recall": 0.8504366812227074,
+        "f1-score": 0.8509373961658376,
+        "support": 916.0
+      }
+    },
+    "confusion": [
+      [
+        468,
+        41,
+        29
+      ],
+      [
+        44,
+        207,
+        4
+      ],
+      [
+        15,
+        4,
+        104
+      ]
+    ]
+  },
+  "test": {
+    "macro_f1": 0.8488262879809106,
+    "accuracy": 0.8617536309844002,
+    "per_class": {
+      "background": {
+        "precision": 0.9078242229367631,
+        "recall": 0.8504016064257028,
+        "f1-score": 0.87817522032141,
+        "support": 996.0
+      },
+      "method": {
+        "precision": 0.8664440734557596,
+        "recall": 0.859271523178808,
+        "f1-score": 0.8628428927680798,
+        "support": 604.0
+      },
+      "result": {
+        "precision": 0.7217125382262997,
+        "recall": 0.9111969111969112,
+        "f1-score": 0.8054607508532423,
+        "support": 259.0
+      },
+      "accuracy": 0.8617536309844002,
+      "macro avg": {
+        "precision": 0.8319936115396075,
+        "recall": 0.8736233469338073,
+        "f1-score": 0.8488262879809106,
+        "support": 1859.0
+      },
+      "weighted avg": {
+        "precision": 0.8684500773603585,
+        "recall": 0.8617536309844002,
+        "f1-score": 0.8630629161608576,
+        "support": 1859.0
+      }
+    },
+    "confusion": [
+      [
+        847,
+        76,
+        73
+      ],
+      [
+        67,
+        519,
+        18
+      ],
+      [
+        19,
+        4,
+        236
+      ]
+    ]
+  }
+}
