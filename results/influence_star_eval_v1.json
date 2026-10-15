@@ -1,0 +1,31 @@
+{
+  "model": "GraphSAGE influence model 'gnn-no-emb' (intent feats: SciBERT fine-tuned (SciCite))",
+  "n_test_edges": 2882,
+  "n_test_papers": 64,
+  "dense": {
+    "test": {
+      "auroc": 0.954082410528005,
+      "auprc": 0.8996565842947298,
+      "f1": 0.8393094289508632
+    },
+    "threshold": 0.900840607881546,
+    "test_at_ckpt_threshold": {
+      "auroc": 0.954082410528005,
+      "auprc": 0.8996565842947298,
+      "f1": 0.8393094289508632
+    }
+  },
+  "star": {
+    "test": {
+      "auroc": 0.9540673647889585,
+      "auprc": 0.8989821589007185,
+      "f1": 0.8405405405405405
+    },
+    "threshold": 0.9048256433010098,
+    "test_at_ckpt_threshold": {
+      "auroc": 0.9540673647889585,
+      "auprc": 0.8989821589007185,
+      "f1": 0.8408488063660478
+    }
+  }
+}
