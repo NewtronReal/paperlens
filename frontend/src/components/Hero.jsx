@@ -9,7 +9,7 @@ export default function Hero({ result }) {
     [num(p.citationCount), "citations"],
     [num(p.influentialCitationCount), "influential citations (S2)"],
     [num(s.n_references), "references resolved"],
-    [num(s.n_core_references), "core references (Model 2 ≥ 0.5)"],
+    [num(s.n_core_references), `core references (Model 2 ≥ ${fmt(result.models.influence_threshold, 2)})`],
     [s.median_reference_age === null ? "–" : `${fmt(s.median_reference_age, 0)} y`, "median age of cited work"],
   ];
   return (

@@ -216,7 +216,7 @@ class Analyzer:
         result = {
             "paper": self._paper_view(paper, arxiv_id, pdf),
             "summary": summary,
-            "stats": self._stats(paper, ref_views, cit_views),
+            "stats": self._stats(paper, ref_views, cit_views, getattr(self.influence, "threshold", 0.5)),
             "models": {"intent": self.intent.name, "influence": self.influence.name,
                        "influence_threshold": getattr(self.influence, "threshold", 0.5)},
             "references": ref_views,
@@ -344,14 +344,14 @@ class Analyzer:
         }
 
     @staticmethod
-    def _stats(p, refs, cits) -> dict:
+    def _stats(p, refs, cits, threshold: float = 0.5) -> dict:
         intents = Counter(r["intent"] for r in refs)
         years = [r["year"] for r in refs if r.get("year")]
         infl = [r for r in refs if r.get("influence") is not None]
         return {
             "n_references": len(refs), "n_citations_analyzed": len(cits),
             "intent_counts": {k: intents.get(k, 0) for k in LABELS + ["unknown"]},
-            "n_core_references": sum(r["influence"] >= 0.5 for r in infl),
+            "n_core_references": sum(r["influence"] >= threshold for r in infl),  # model's val-tuned threshold
             "median_reference_year": float(np.median(years)) if years else None,
             "median_reference_age": float(np.median([(p.get("year") or y) - y for y in years])) if years else None,
             "top_reference_venues": Counter(r["venue"] for r in refs if r.get("venue")).most_common(5),

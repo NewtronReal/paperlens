@@ -28,8 +28,11 @@ VARIANTS = {
     "gnn":           (True,    True,     True,   True),
     "gnn-no-intent": (True,    True,     False,  True),
     "gnn-no-emb":    (True,    True,     True,   False),
+    "gnn-no-emb-no-intent": (True, True, False,  False),
     "mlp":           (False,   True,     True,   True),
     "mlp-no-intent": (False,   True,     False,  True),
+    "mlp-no-emb":    (False,   True,     True,   False),
+    "mlp-no-emb-no-intent": (False, True, False, False),
 }
 
 
